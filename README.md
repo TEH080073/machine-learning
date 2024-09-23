@@ -15,14 +15,12 @@
 	•	train_test_split: 数据集划分
 	•	StandardScaler: 特征标准化
 	•	cross_val_score: 交叉验证评估
-	•	roc_curve, roc_auc_score: 计算和评估 ROC 曲线
+	•	roc_curve, auc: 计算和评估 ROC 曲线
 	•	matplotlib: 用于绘制图表，版本 3.7.2
 
 参数设置
 
 	•	模型训练
-	•	random_state: 42（用于确保结果的可重复性）
+	•	random_state: 50（用于确保结果的可重复性）
 	•	test_size: 0.2（20%的数据用作测试集）
 	•	LogisticRegression
-	•	solver: ‘lbfgs’（逻辑回归的求解算法，适用于中小数据集）
-	•	max_iter: 100（求解器的最大迭代次数）
