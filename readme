@@ -1,13 +1,14 @@
- # README - 作业2
+ # README - 作业3
 
 ## 课程信息
 - **课程：** 机器学习
 - **教师：** 张学工老师
-- **日期：** 2024年9月19日
-- **作业编号：** 2
+- **日期：** 2024年10月4日
+- **作业编号：** 3
 
 ## 实验描述
-本次作业涉及使用逻辑回归从病人的ICU记录中分类病人的生存结果。任务包括训练模型、计算误差以及生成 ROC 曲线。
+本次作业是开发一个多层感知器（MLP）模型，用于预测ICU患者的存活率。项目的结构旨在引导您从数据预处理到模型训练和评估的整个机器学习解决方案实施过程。
+
 
 ## 数据集
 - **训练集1：** 5000个样本（`train1_icu_data.csv` 和 `train1_icu_label.csv`）
@@ -18,19 +19,29 @@
 - **Python 版本：** 3.8.18
 - **操作系统 ：**  macOS
 - **开发系统 ：**  Visual Studio Code
-- **所需包：** pandas, scikit-learn, matplotlib
+- **所需包：** pandas, scikit-learn, TensorFlow, matplotlib
   - 使用以下命令安装所需包：
     ```
-    pip install pandas scikit-learn matplotlib
+    pip install pandas scikit-learn tensorflow matplotlib
     ```
 
-## 包含文件
+## 文件结构
 - `train1_icu_data.csv`: 训练数据集
 - `train1_icu_label.csv`: 训练标签
 - `test1_icu_data.csv`: 测试数据集
 - `test1_icu_label.csv`: 测试标签
-- `feature_description.csv`: 每个特征的描述
+- `model.py`: 包含模型定义、训练和评估的脚本
 
-## 运行方式
-1. 确保所有数据集与脚本位于同一目录下。
-2. 使用以下命令运行脚本：
+## 使用说明
+	1.	数据预处理
+	•	从CSV文件加载数据。
+	•	将数据分为训练集和验证集。
+	•	使用StandardScaler标准化特征。
+	2.	模型训练
+	•	定义一个带有两个隐藏层和dropout的MLP模型。
+	•	使用Adam优化器和二进制交叉熵损失编译模型。
+	•	在训练数据上训练模型，并在验证集上进行验证。
+	3.	评估
+	•	在验证集和测试数据集上评估模型。
+	•	计算并报告平均训练和验证损失。
+	•	绘制训练和验证损失及准确率的图表。
